@@ -30,7 +30,7 @@ export class VideoComponent implements OnInit {
     getVideo(): void {
         const id = +this.route.snapshot.paramMap.get('id');
         // tslint:disable-next-line:no-shadowed-variable
-        this.videoService.getVideo(id).subscribe(Video => this.video = Video);
+        this.videoService.getVideo(id).subscribe(video => this.video = video);
 
     }
     goBack(): void {

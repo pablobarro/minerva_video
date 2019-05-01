@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+  background-color: #000;
+}
+
+nav {
+  position: fixed !important;
+  z-index: 90;
+}
+
+nav .navbar-brand img {
+  width: 4rem;
+}
+
+nav .navbar {
+  position: fixed !important;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,5 +1,6 @@
 import {Component, OnInit } from '@angular/core';
 import {Video} from '../video';
+import {Categoria} from '../categoria';
 
 import { VideoService } from '../services/detail.service';
 
@@ -13,6 +14,8 @@ import { VideoService } from '../services/detail.service';
 
 export class HomeComponent implements OnInit {
     public videos: Video[];
+    public categorias: Categoria[];
+
     public portada: 'videos/abstracto/portada.mp4';
 
     constructor(
@@ -22,11 +25,16 @@ export class HomeComponent implements OnInit {
 
     ngOnInit() {
         this.getVideos();
+        this.getCategorias();
 
     }
 
 
     getVideos(): void {
         this._videoService.getVideos().subscribe(videos => this.videos = videos);
+    }
+
+    getCategorias(): void {
+        this._videoService.getCategorias().subscribe(categorias => this.categorias = categorias);
     }
 }
