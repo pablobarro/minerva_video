@@ -7,8 +7,27 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="assets\bootstrap-4.3.1-dist\css\bootstrap.css">
+  <script type="text/javascript" src="assets\bootstrap-4.3.1-dist\js\bootstrap.js"></script>
+  <script type="text/javascript" src="assets\jquery\jquery-3.3.1.min.js"></script>
 </head>
-<body>
-  <app-root></app-root>
+ <body class="text-center">
+    <div class="cover-container d-flex w-100 h-100 mx-auto flex-column">
+  <header class="masthead mb-auto">
+    <div class="inner">
+      
+      <nav class="nav nav-masthead navbar navbar-expand-lg justify-content-center">
+        <a class="navbar-brand" href="#"><img id="logo" alt="logo" src="/assets/logo/logo.png"></a>
+        <a routerLink="/categorias" href="">Categorias</a>
+      </nav>
+    </div>
+  </header>
+
+  <main role="main" class="inner cover">
+    <app-root></app-root>
+  </main>
+
+ 
+</div>
 </body>
 </html>

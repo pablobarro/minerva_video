@@ -1,0 +1,34 @@
+
+<div class="portada">
+
+  <video class="portada" autoplay muted loop >    
+      <source src="/assets/data/videos/abstracto/portada.mp4" type="video/mp4">
+      </video>
+  
+    <div class="container text-white">
+  
+      <h1 class="display-4">Hello, world!</h1>
+      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+      <hr class="my-4">
+      <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+  
+    </div>
+ </div>
+
+<div class="container-fluid" >
+   <div class="row">
+     
+      <div class="card bg-dark col-md-12 col-lg-6 col-xl-4" *ngFor="let video of videos" >
+          
+            <img src="//cdn.pixabay.com/photo/2014/09/30/22/50/sandstone-467714_960_720.jpg" class="card-img" alt="imagen de muestra">
+         <div class="card-img-overlay">
+           <h3 class="card-title"><a routerLink="/video_detalle/{{video.id}}">{{video.name}}</a></h3>
+           <p>{{video.descripcion}}</p>
+          </div>
+        
+    </div>
+  </div>
+   
+</div>
+ 

@@ -136,5 +136,10 @@
       }
     }
   },
-  "defaultProject": "minerva"
+  "defaultProject": "minerva",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }
