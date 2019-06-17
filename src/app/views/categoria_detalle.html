@@ -1,0 +1,14 @@
+<div class="container-fluid" >
+        <div class="row">
+    
+           <div class="card bg-dark col-md-12 col-lg-6 col-xl-4" *ngFor="let categoria of categorias" >
+    
+                 <img src="/assets/data/{{categoria.imagen}}" class="card-img" alt="imagen de muestra">
+              <div class="card-img-overlay">
+                <h3 class="card-title"><a routerLink="">{{categoria.name}}</a></h3>
+               </div>
+    
+         </div>
+       </div>
+    
+</div>

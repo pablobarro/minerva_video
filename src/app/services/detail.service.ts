@@ -19,4 +19,7 @@ export class VideoService {
     getVideo(id: number): Observable<Video> {
         return of(VIDEOS.find(video => video.id === id));
     }
+    getCategoria(id: number): Observable<Categoria> {
+        return of(CATEGORIAS.find(categoria => categoria.id === id));
+    }
 }

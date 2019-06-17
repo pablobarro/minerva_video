@@ -31,8 +31,14 @@ $text-color: ghostwhite
 .card
   margin-top: .8rem
   cursor: pointer
-  h3,h4 
-
+  background-color: transparent
+  h2,h3,h4 
+   a 
+      text-decoration: none
+      color: $text-color!important
+      &:hover
+      color: $text-color!important
+      filter: opacity(1)
   .card-title
       font-size: $font-size
       filter: $opacidad
@@ -50,6 +56,8 @@ $text-color: ghostwhite
         position: absolute
         color: $text-color
         text-overflow: ellipsis
+   
+
         
 
     

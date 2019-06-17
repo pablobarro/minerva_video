@@ -4,5 +4,6 @@ export class Video {
     name: string;
     categoria: string;
     descripcion: string;
+    poster: string;
     src: string;
 }

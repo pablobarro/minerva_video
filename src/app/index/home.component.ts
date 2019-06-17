@@ -1,7 +1,6 @@
 import {Component, OnInit } from '@angular/core';
 import {Video} from '../video';
 import {Categoria} from '../categoria';
-
 import { VideoService } from '../services/detail.service';
 
 @Component({

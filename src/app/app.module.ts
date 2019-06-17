@@ -8,6 +8,7 @@ import { routing, appRoutingProviders } from './app.routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './index/home.component';
 import { CategoriasComponent } from './categorias/categorias.conponent';
+import { CategoriaComponent } from './categoria_detalle/categoria.component';
 import { VideoComponent } from './detalle/video.component';
 
 @NgModule({
@@ -20,6 +21,7 @@ import { VideoComponent } from './detalle/video.component';
     AppComponent,
     HomeComponent,
     CategoriasComponent,
+    CategoriaComponent,
     VideoComponent
   ],
   providers: [appRoutingProviders],

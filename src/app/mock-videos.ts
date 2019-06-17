@@ -8,6 +8,7 @@ export const VIDEOS: Video[] = [
         categoria: 'ciudades',
         // tslint:disable-next-line:max-line-length
         descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus dapibus sem quis sodales. Donec at nibh rutrum lectus condimentum venenatis. Cras eu semper metus, vel bibendum ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent viverra quis elit sit amet vestibulum. Suspendisse potenti. Sed a neque auctor tortor luctus varius nec sagittis neque.',
+        poster: 'img/categorias/ciudades/videos/seul.jpg',
         src: 'videos/ciudades/Seoul_21985.mp4'
     },
     {
@@ -16,6 +17,7 @@ export const VIDEOS: Video[] = [
         categoria: 'ciudades',
         // tslint:disable-next-line:max-line-length
         descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus dapibus sem quis sodales. Donec at nibh rutrum lectus condimentum venenatis. Cras eu semper metus, vel bibendum ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent viverra quis elit sit amet vestibulum. Suspendisse potenti. Sed a neque auctor tortor luctus varius nec sagittis neque.',
+        poster: 'img/categorias/ciudades/videos/street.jpg',
         src: 'videos/ciudades/Street_19627.mp4'
     },
     {
@@ -24,6 +26,7 @@ export const VIDEOS: Video[] = [
         categoria: 'ciudades',
         // tslint:disable-next-line:max-line-length
         descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus dapibus sem quis sodales. Donec at nibh rutrum lectus condimentum venenatis. Cras eu semper metus, vel bibendum ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent viverra quis elit sit amet vestibulum. Suspendisse potenti. Sed a neque auctor tortor luctus varius nec sagittis neque.',
+        poster: 'img/categorias/ciudades/videos/walk.jpg',
         src: 'videos/ciudades/Walking_21782.mp4'
     },
     {
@@ -32,7 +35,8 @@ export const VIDEOS: Video[] = [
         categoria: 'abstracto',
         // tslint:disable-next-line:max-line-length
         descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus dapibus sem quis sodales. Donec at nibh rutrum lectus condimentum venenatis. Cras eu semper metus, vel bibendum ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent viverra quis elit sit amet vestibulum. Suspendisse potenti. Sed a neque auctor tortor luctus varius nec sagittis neque.',
-        src: 'video/abstracto/TheBackground_22126.mp4'
+        poster: 'img/categorias/abstracto/videos/background.jpg',
+        src: 'videos/abstracto/TheBackground_22126.mp4'
     }
 
     ];
@@ -40,12 +44,12 @@ export const CATEGORIAS: Categoria[] = [
     {
         id: 1,
         name: 'ciudades',
-        imagen: ''
+        imagen: 'img/categorias/ciudades/portada/portada.jpg'
     },
     {
         id: 2,
         name: 'abstracto',
-        imagen: ''
+        imagen: 'img/categorias/abstracto/portada/portada.jpg'
 
     }
 ];
