@@ -7,7 +7,7 @@ import { routing, appRoutingProviders } from './app.routing.module';
 // Components
 import { AppComponent } from './app.component';
 import { HomeComponent } from './index/home.component';
-import { CategoriasComponent } from './categorias/categorias.conponent';
+import { CategoriasComponent } from './categorias/categorias.component';
 import { CategoriaComponent } from './categoria_detalle/categoria.component';
 import { VideoComponent } from './detalle/video.component';
 

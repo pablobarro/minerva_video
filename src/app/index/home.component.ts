@@ -14,7 +14,6 @@ import { VideoService } from '../services/detail.service';
 export class HomeComponent implements OnInit {
     public videos: Video[];
     public categorias: Categoria[];
-
     public portada: 'videos/abstracto/portada.mp4';
 
     constructor(

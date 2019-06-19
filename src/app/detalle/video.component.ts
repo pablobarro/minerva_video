@@ -13,27 +13,30 @@ import { VideoService } from '../services/detail.service';
 })
 
 export class VideoComponent implements OnInit {
-    public video: Video;
-
+    public videoSeleccionado: Video;
+    public videos: Video[];
+    public categoriaVideo: {categoria: string; };
     constructor(
         private route: ActivatedRoute,
         private videoService: VideoService,
         private location: Location
-    ) {
-        console.log(+this.route.snapshot.paramMap.get('id'));
-    }
+    ) { }
 
     ngOnInit(): void {
         this.getVideo();
+        this.getVideos();
     }
 
     getVideo(): void {
         const id = +this.route.snapshot.paramMap.get('id');
-        // tslint:disable-next-line:no-shadowed-variable
-        this.videoService.getVideo(id).subscribe(video => this.video = video);
+        this.videoService.getVideo(id).subscribe(videoSeleccionado => this.videoSeleccionado = videoSeleccionado);
 
+    }
+    getVideos(): void {
+        this.videoService.getVideos().subscribe(videos => this.videos = videos);
     }
     goBack(): void {
         this.location.back();
     }
 }
+

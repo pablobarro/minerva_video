@@ -16,11 +16,11 @@ import { VideoService } from '../services/detail.service';
 export class CategoriaComponent implements OnInit {
     public videos: Video[];
     public categoria: Categoria;
-    public categoriaVideo: {categoria: string;};
+    public categoriaVideo: {categoria: string; };
 
     constructor(
         private route: ActivatedRoute,
-        private _videoService: VideoService,
+        private videoService: VideoService,
         private location: Location
     ) {
         console.log(+this.route.snapshot.paramMap.get('id'));
@@ -29,7 +29,6 @@ export class CategoriaComponent implements OnInit {
     ngOnInit() {
         this.getVideos();
         this.getCategoria();
-        //this.getCategoriaVideo();
         this.categoriaVideo = {
           categoria: this.route.snapshot.params.name
           };
@@ -37,21 +36,12 @@ export class CategoriaComponent implements OnInit {
 
     getCategoria(): void {
         const id = +this.route.snapshot.paramMap.get('id');
-        // tslint:disable-next-line:no-shadowed-variable
-        this._videoService.getCategoria(id).subscribe(categoria => this.categoria = categoria);
+        this.videoService.getCategoria(id).subscribe(categoria => this.categoria = categoria);
     }
 
     getVideos(): void {
-      this._videoService.getVideos().subscribe(videos => this.videos = videos);
+      this.videoService.getVideos().subscribe(videos => this.videos = videos);
 
-  }
-    getCategoriaVideo(){
-     // return this.videos.filter((videos) => videos.categoria === this.categoriaVideo);
-     /*this.categoriaVideo = {
-      categoria: this.route.snapshot.params.name
-      };
-      var filtroCategoria = this.categoriaVideo;
-      console.log(filtroCategoria);*/
   }
     goBack(): void {
         this.location.back();

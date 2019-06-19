@@ -19,13 +19,15 @@
 <div class="container-fluid" >
     <h2>Videos recientes</h2>
    <div class="row">
-      
+
       <div class="card col-md-12 col-lg-6 col-xl-4" *ngFor="let video of videos" >
           <a routerLink="/video_detalle/{{video.id}}" class="text-reset">
             <img src="/assets/data/{{video.poster}}" class="card-img" alt="imagen de muestra">
-         <div class="card-img-overlay">
-           <h3 class="card-title">{{video.name}}</h3>
-           <p>{{video.descripcion}}</p>
+         <div class="card-body">
+            <div class="card-img-overlay">
+            <h3 class="card-title">{{video.name}}</h3>
+            <p class="card-text">{{video.descripcion}}</p>
+            </div>
           </div>
           </a>
     </div>
@@ -35,16 +37,19 @@
 
 <div class="container-fluid" >
     <h2>Categorias</h2>
-  <div class="row">
-    
-     <div class="card col-md-12 col-lg-6 col-xl-4" *ngFor="let categoria of categorias" >
-        <a routerLink="">
-           <img src="/assets/data/{{categoria.imagen}}" class="card-img" alt="imagen de muestra">
-        <div class="card-img-overlay">
-          <h3 class="card-title">{{categoria.name}}</h3>
-         </div>
-        </a>
-   </div>
- </div>
+    <div class="container-fluid" >
+        <div class="row">
+           <div class="col-md-12 col-lg-6 col-xl-4" *ngFor="let categoria of categorias" >
+              <a routerLink="/categoria_detalle/{{categoria.name}}">
+              <div class="card bg-dark" >
+                  <img src="/assets/data/{{categoria.imagen}}" class="card-img" alt="imagen de muestra">
+                  <div class="card-img-overlay">
+                    <h3 class="card-title">{{categoria.name}}</h3>
+                    </div>
+              </div>
+            </a>
+          </div>
+        </div>
+  </div>
 
 </div>
