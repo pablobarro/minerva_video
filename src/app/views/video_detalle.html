@@ -16,8 +16,12 @@
       </div>
       <div class="container-fluid" >
           <div class="row" >
-              <div class="col-md-12 col-lg-6 col-xl-4" *ngFor="let video of videos" >
-                    <div class="card bg-dark"  *ngIf="video.categoria == videoSeleccionado.categoria">
+            <div *ngFor="let video of videos" style="display: contents;">
+              
+                <div *ngIf="video.categoria === videoSeleccionado.categoria && video.id != videoSeleccionado.id; then filtro"></div>
+                  <ng-template #filtro>
+                      <div class="col-md-12 col-lg-6 col-xl-4"  >
+                  <div class="card bg-dark"  >
                         <a routerLink="/video_detalle/{{video.id}}">
                         <img src="/assets/data/{{video.poster}}" class="card-img" alt="imagen de muestra">
                         <div class="card-img-overlay">
@@ -25,6 +29,8 @@
                         </div>
                       </a>
                   </div>
+                </div>
+                </ng-template>
             </div>
         </div>
       </div>

@@ -7,6 +7,7 @@ import { HomeComponent } from './index/home.component';
 import { CategoriasComponent } from './categorias/categorias.component';
 import { CategoriaComponent } from './categoria_detalle/categoria.component';
 import { VideoComponent } from './detalle/video.component';
+import { EditorComponent } from './formularios/editor.component';
 
 
 
@@ -17,6 +18,7 @@ const appRoutes: Routes = [
     {path: 'video_detalle/:id', component: VideoComponent},
     {path: 'categorias', component: CategoriasComponent},
     {path: 'categoria_detalle/:name', component: CategoriaComponent},
+    {path: 'editor', component: EditorComponent},
     {path: '**', component: HomeComponent}
 ];
 
