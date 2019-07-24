@@ -8,8 +8,8 @@ export const VIDEOS: Video[] = [
         categoria: 'ciudades',
         // tslint:disable-next-line:max-line-length
         descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus dapibus sem quis sodales. Donec at nibh rutrum lectus condimentum venenatis. Cras eu semper metus, vel bibendum ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent viverra quis elit sit amet vestibulum. Suspendisse potenti. Sed a neque auctor tortor luctus varius nec sagittis neque.',
-        poster: 'img/categorias/ciudades/videos/seul.jpg',
-        src: 'videos/ciudades/Seoul_21985.mp4'
+        poster: 'https://cdn.pixabay.com/photo/2017/03/21/17/10/nightlife-2162772_960_720.jpg',
+        src: '//player.vimeo.com/video/323496013?title=0&portrait=0&byline=0&autoplay=1&loop=1'
     },
     {
         id: 2,
