@@ -1,0 +1,69 @@
+
+
+$espaciado: .8rem
+$font-size: 5.4rem
+$opacidad: opacity(.5)
+$text-color: ghostwhite
+
+.cover-container
+  padding: 0
+.portada 
+  position: relative
+  overflow: hidden
+  background-color: black
+  padding: 0
+.portada
+  video
+      position: relative
+      z-index: 1
+      top: 0
+      min-width: 100%
+      min-height: 100%
+      object-fit: cover
+      opacity: 1
+.container
+  z-index: 2
+  position: absolute
+  width: 100%
+  
+.container-fluid
+  margin-top: 4rem
+.card
+  margin-top: .8rem
+  cursor: pointer
+  background-color: transparent
+  h2,h3,h4 
+   a 
+      text-decoration: none
+      color: $text-color!important
+      &:hover
+      color: $text-color!important
+      filter: opacity(1)
+  .card-title
+      font-size: $font-size
+      filter: $opacidad
+      color: $text-color
+      text-align: center
+      margin-top: 2rem
+      overflow: hidden
+  .p
+    display: none  
+  &:hover
+    .card-title
+      filter: opacity(1)
+    p
+        display: block
+        position: absolute
+        color: $text-color
+        text-overflow: ellipsis
+   
+
+        
+
+    
+  
+  
+    
+    
+
+      

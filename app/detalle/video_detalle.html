@@ -1,0 +1,37 @@
+
+ <div class="detalle_background">
+      <div *ngIf="video">
+            <video width="100%" controls autoplay >
+              <source src="{{video.src}}" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
+      </div>
+      <div class="container-fluid">
+            <div class="row justify-content-md-center">
+              <div class="col-6 ">
+              <h3>{{video.name}}</h3>
+              <p>{{video.descripcion}}</p>
+            </div>
+            </div>
+      </div>
+      <div class="container-fluid" >
+          <div class="row" >
+            <div *ngFor="let video of videos" style="display: contents;">
+              
+                <div *ngIf="video.categoria === video.categoria && video.id != video.id; then filtro"></div>
+                  <ng-template #filtro>
+                      <div class="col-md-12 col-lg-6 col-xl-4"  >
+                  <div class="card bg-dark"  >
+                        <a routerLink="/video_detalle/{{video.id}}">
+                        <img src="{{video.poster}}" class="card-img" alt="imagen de muestra">
+                        <div class="card-img-overlay">
+                          <h3 class="card-title">{{video.name}}</h3>
+                        </div>
+                      </a>
+                  </div>
+                </div>
+                </ng-template>
+            </div>
+        </div>
+      </div>
+</div>

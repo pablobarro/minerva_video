@@ -1,0 +1,125 @@
+<div class="container-fluid" (video)="video">
+        <h3>Editor</h3>
+        <div *ngIf="video; else noVideo"></div>
+        <form #formVideo="ngForm" (ngSubmit)="update(formVideo.value)">
+          
+                    <div class="form-row" >
+                                    <div class="form-group col-6">
+                                    <label for="tituloForm">Título</label>
+                                    <input type="text" class="form-control" id="tituloForm" name="name" [(ngModel)]="video.name" #name="ngModel" placeholder="{{video.name}}" >
+                                    </div>
+                                    <div class="form-group col-6">
+                                    <label for="categoriaForm">Categoría</label>
+                                    <select class="form-control" id="categoriaForm" name="categoria" [(ngModel)]="video.categoria" #categoria="ngModel" placeholder="categoria">
+                                        <option >Ciudades</option>
+                                        <option >Abstracto</option>
+                                        <option >Personas</option>
+                                    </select>
+                                    </div>
+                                
+                                    <div class="form-group col-12">
+                                    <label for="descripcionForm">Descripción</label>
+                                    <textarea class="form-control" id="descripcionForm" rows="3" name="descripcion" [(ngModel)]="video.descripcion" #descripcion="ngModel" placeholder="descripcion"></textarea>
+                                    </div>
+                                    
+                                    <div class="form-group  col-6">
+                                            <label for="urlVideoForm">Url video</label>
+                                            <input type="text" class="form-control" id="urlVideoForm" name="src" [(ngModel)]="video.src" #src="ngModel" placeholder="src">
+                                            <br>
+                                            
+                                    </div>
+                                    <div class="form-group col-6">
+                                            <label for="urlImagenForm">Url imagen</label>
+                                           <input type="text" class="form-control" id="urlImagenForm" name="poster" [(ngModel)]="video.poster" #poster="ngModel" placeholder="src">
+                                            <br>
+                                            
+                                    </div>
+                                    
+                                </div>
+                                
+                            <div class="form-row">
+                                    <div class="col-1">
+                                            <button type="submit" class="btn btn-danger" id="envioForm" name="envioForm" [disabled]="!formVideo.form.valid">Enviar</button>
+                                    </div>
+                                    <div class="col-1">
+                                            <button type="reset" class="btn btn-warning" id="cancelForm" name="cancelForm" >Cancelar</button>
+                                    </div>
+                            </div>
+                    </form>
+            <ng-template #noVideo>
+                            <form #formVideo="ngForm" (ngSubmit)="add(formVideo.value)">
+          
+                                            <div class="form-row" *ngIf="video">
+                                                            <div class="form-group col-6">
+                                                            <label for="tituloForm">Título</label>
+                                                            <input type="text" class="form-control" id="tituloForm" name="name" [(ngModel)]="video.name" #name="ngModel" placeholder="{{video.name}}" >
+                                                            </div>
+                                                            <div class="form-group col-6">
+                                                            <label for="categoriaForm">Categoría</label>
+                                                            <select class="form-control" id="categoriaForm" name="categoria" [(ngModel)]="video.categoria" #categoria="ngModel" placeholder="categoria">
+                                                                <option >Ciudades</option>
+                                                                <option >Abstracto</option>
+                                                                <option >Personas</option>
+                                                            </select>
+                                                            </div>
+                                                        
+                                                            <div class="form-group col-12">
+                                                            <label for="descripcionForm">Descripción</label>
+                                                            <textarea class="form-control" id="descripcionForm" rows="3" name="descripcion" [(ngModel)]="video.descripcion" #descripcion="ngModel" placeholder="descripcion"></textarea>
+                                                            </div>
+                                                            
+                                                            <div class="form-group  col-6">
+                                                                    <label for="urlVideoForm">Url video</label>
+                                                                    <input type="text" class="form-control" id="urlVideoForm" name="src" [(ngModel)]="video.src" #src="ngModel" placeholder="src">
+                                                                    <br>
+                                                                    
+                                                            </div>
+                                                            <div class="form-group col-6">
+                                                                    <label for="urlImagenForm">Url imagen</label>
+                                                                    <input type="text" class="form-control" id="urlImagenForm" name="poster" [(ngModel)]="video.poster" #poster="ngModel" placeholder="src">
+                                                                    <br>
+                                                                    
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        
+                                                    <div class="form-row">
+                                                            <div class="col-2">
+                                                                    <button type="submit" class="btn btn-danger" id="envioForm" name="envioForm" [disabled]="!formVideo.form.valid">Enviar</button>
+                                                            </div>
+                                                    </div>
+                                            </form>
+            </ng-template>
+        
+    </div>
+    
+    
+<videos></videos>
+<!--<div class="container-fluid" >
+        <h2>Videos Creados</h2>
+       <div class="row">
+    
+          <div class="card col-md-12 col-lg-6 col-xl-4" *ngFor="let video of videos" >
+                    
+              <div id="video_{{video.id}}"  class="text-reset">
+                <img src="{{video.poster}}" class="card-img" alt="imagen de muestra">
+             <div class="card-body">
+             <div class="row">
+                <div class="col-6" class="editor">
+                    <button routerLink="/editor/{{video.id}}">Editar</button>      
+                     <button (click)="delete(video)">Borrar</button> 
+                </div>
+                </div>
+                <div class="card-img-overlay" >
+                <h3 class="card-title">{{video.name}}</h3>
+                <p class="card-text">{{video.descripcion}}</p>
+                </div>
+              </div>
+        </div>
+               
+             
+        </div>
+        
+      </div>
+    
+    </div>-->
